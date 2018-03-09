@@ -1132,9 +1132,9 @@ static int guiRefreshVMCConfig(item_list_t *support, char *name)
             diaSetEnabled(diaVMC, VMC_BUTTON_CREATE, 1);
             diaSetEnabled(diaVMC, VMC_BUTTON_DELETE, 1);
         } else {
-            diaSetEnabled(diaVMC, VMC_SIZE, 0);
-            diaSetEnabled(diaVMC, VMC_BUTTON_CREATE, 0);
-            diaSetEnabled(diaVMC, VMC_BUTTON_DELETE, 0);
+            diaSetEnabled(diaVMC, VMC_SIZE, 1);
+            diaSetEnabled(diaVMC, VMC_BUTTON_CREATE, 1);
+            diaSetEnabled(diaVMC, VMC_BUTTON_DELETE, 1);
         }
     } else {
         diaSetLabel(diaVMC, VMC_BUTTON_CREATE, _l(_STR_CREATE));
@@ -1143,7 +1143,7 @@ static int guiRefreshVMCConfig(item_list_t *support, char *name)
         diaSetInt(diaVMC, VMC_SIZE, 0);
         diaSetEnabled(diaVMC, VMC_SIZE, 1);
         diaSetEnabled(diaVMC, VMC_BUTTON_CREATE, 1);
-        diaSetVisible(diaVMC, VMC_BUTTON_DELETE, 0);
+        diaSetVisible(diaVMC, VMC_BUTTON_DELETE, 1);
     }
 
     return size;
